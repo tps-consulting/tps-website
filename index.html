@@ -248,34 +248,39 @@
           </ul>
         </div>
 
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-row">
-            <label for="phone">연락처</label>
-            <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000">
-          </div>
-          <div class="form-row">
-            <label>구분</label>
-            <div class="radio-row">
-              <label><input type="radio" name="type" value="개인사업자" checked> 개인사업자</label>
-              <label><input type="radio" name="type" value="법인"> 법인</label>
-              <label><input type="radio" name="type" value="예비창업자"> 예비창업자</label>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <label for="name">이름</label>
+              <input type="text" id="name" name="name" required>
             </div>
+            <div class="form-row">
+              <label for="phone">연락처</label>
+              <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000">
+            </div>
+            <div class="form-row">
+              <label>구분</label>
+              <div class="radio-row">
+                <label><input type="radio" name="type" value="개인사업자" checked> 개인사업자</label>
+                <label><input type="radio" name="type" value="법인"> 법인</label>
+                <label><input type="radio" name="type" value="예비창업자"> 예비창업자</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="message">문의 내용</label>
+              <textarea id="message" name="message" rows="3" placeholder="업종, 매출 규모, 궁금하신 자금 등을 남겨주세요"></textarea>
+            </div>
+            <label class="consent-row">
+              <input type="checkbox" id="consent" required>
+              개인정보 수집 및 이용에 동의합니다.
+            </label>
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">상담신청 &gt;</button>
+            <p class="form-status" id="formStatus" hidden></p>
+          </form>
+          <div class="form-thanks" id="formThanks" hidden>
+            <p>문의 주셔서 감사합니다.<br>빠른 시일 내에 확인 후 연락드리겠습니다.</p>
           </div>
-          <div class="form-row">
-            <label for="message">문의 내용</label>
-            <textarea id="message" name="message" rows="3" placeholder="업종, 매출 규모, 궁금하신 자금 등을 남겨주세요"></textarea>
-          </div>
-          <label class="consent-row">
-            <input type="checkbox" id="consent" required>
-            개인정보 수집 및 이용에 동의합니다.
-          </label>
-          <button type="submit" class="btn btn-primary btn-block">상담신청 &gt;</button>
-          <p class="form-status" id="formStatus" hidden></p>
-        </form>
+        </div>
       </div>
     </div>
   </section>
