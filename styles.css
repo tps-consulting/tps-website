@@ -694,6 +694,19 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-soft);
 }
 
+.form-status {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.form-status a { color: var(--blue); font-weight: 600; }
+
 /* ============================================================
    Footer — minimal
    ============================================================ */
