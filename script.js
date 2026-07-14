@@ -13,7 +13,7 @@ navLinks.querySelectorAll("a").forEach((link) => {
 
 const CONTACT_EMAIL = "jasonkim0210@gmail.com";
 // Formspree form endpoint (e.g. "https://formspree.io/f/xxxxxxxx"). Empty = not configured yet.
-const FORMSPREE_ENDPOINT = "";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrenbbea";
 
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
