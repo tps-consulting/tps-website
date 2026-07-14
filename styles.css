@@ -529,6 +529,51 @@ a { color: inherit; text-decoration: none; }
 .card p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
 
 /* ============================================================
+   Funding detail pages — definition + feature cards + spec table
+   ============================================================ */
+.funding-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+.detail-table th, .detail-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  font-size: 0.92rem;
+  vertical-align: top;
+}
+
+.detail-table tr:last-child th, .detail-table tr:last-child td { border-bottom: none; }
+
+.detail-table th {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+  width: 160px;
+  white-space: nowrap;
+}
+
+.detail-table td { color: var(--ink-soft); line-height: 1.6; }
+
+/* ============================================================
    FAQ
    ============================================================ */
 .faq-list {
