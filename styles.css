@@ -196,6 +196,117 @@ a { color: inherit; text-decoration: none; }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
+/* ============================================================
+   Page header — compact banner for sub-pages (e.g. about.html)
+   ============================================================ */
+.page-header {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 120px 0 56px;
+}
+
+.page-header .hero-bg { opacity: 0.95; }
+
+.page-header .hero-inner { max-width: 720px; }
+
+.page-header h1 {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+  margin: 0 0 16px;
+  color: var(--off-white);
+}
+
+/* Mission intro */
+.mission-text {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.mission-text p { margin: 0 0 20px; }
+.mission-text p:last-child { margin-bottom: 0; }
+
+/* Business area cards reuse .segment-card; bullet list inside */
+.area-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.area-list li {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  padding-left: 14px;
+  position: relative;
+}
+
+.area-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.area-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: rgba(31, 97, 241, 0.08);
+  padding: 3px 10px;
+  border-radius: var(--r-sm);
+  margin: 0 0 14px;
+}
+
+/* Strength band — dark section with checklist */
+.strength-band { background: var(--near-black); }
+
+.strength-list {
+  list-style: none;
+  padding: 0;
+  margin: 48px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.strength-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-lg);
+}
+
+.strength-mark {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.strength-item p { margin: 0; color: rgba(255, 255, 255, 0.75); font-size: 0.92rem; line-height: 1.6; }
+
 .scroll-cue {
   position: absolute;
   right: 40px;
@@ -573,6 +684,7 @@ a { color: inherit; text-decoration: none; }
   .value-stats { grid-template-columns: 1fr; gap: 40px; }
   .process-grid { grid-template-columns: 1fr; }
   .cta-grid { grid-template-columns: 1fr; }
+  .strength-list { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
@@ -592,7 +704,7 @@ a { color: inherit; text-decoration: none; }
     gap: 16px;
   }
 
-  .hero { min-height: unset; padding: 110px 0 64px; }
+  .hero, .page-header { min-height: unset; padding: 110px 0 64px; }
   .scroll-cue { display: none; }
   .section { padding: 64px 0; }
   .value-band, .cta-section { padding: 64px 0; }
